@@ -2,6 +2,8 @@ tictactoe = "____________________"
 
 print(tictactoe)
 
+move_player = int(input("make your move between 0 and 19"))
+ 
 #def evaluate(): 
    # if tictactoe == "XXX":
     #    return "X"
@@ -17,9 +19,9 @@ print(tictactoe)
     #pass
 
 #def player_move(position, sign):
- #   input("which position do you wannt to play between 0 and 19")
-  #  tictactoe_new = 
+#    int(input("play a position between 0 and 19"))
+#tictactoe_new = 
 
-def pc_move(board):
-   from random import randrange
-print("randrange"(19))
+#def pc_move(board):
+ #  from random import randrange
+#print("randrange"(19))
