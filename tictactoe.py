@@ -1,27 +1,66 @@
-tictactoe = "____________________"
+# board
+# display board
+# play game
+# handle turn
+# check win
+  # check rows
+# check tie
+  # if the board is full and there is no winner
+# flip the players
 
-print(tictactoe)
+# --Global variables--
 
-move_player = int(input("make your move between 0 and 19"))
+# board
+print("lets start this game")
+board = "____________________"
+
+# If game is still going
+game_still_going = True
+
+# who won?
+winner = None
+
+# whenever i want to see the board i have to call this function
+def display_board():
+  print(board)
+
+def play_game():
+  # prints the initial board
+  display_board()
+
+  while game_still_going: 
+
+    players_move()
+
+    evaluate_game()
+
+    flip_player()
+
+# the game has ended
+  if winner == "X" or winner == "O":
+    print(winner) + "has won and is great"
+  elif winner == None:
+    print("it is a tie")
+
+def players_move():
+  position_player = int(input("Chose a position between 1-20:"))
+
+  board_new=board[:position_player-1]+board[position_player-1].replace('_','X')+board[position_player:]
  
-#def evaluate(): 
-   # if tictactoe == "XXX":
-    #    return "X"
-   # elif tictactoe == "ooo":
-    #    return "o"
-   # elif tictactoe == 
-     #   return "!"
-   # elif tictactoe == 
-    #    return "-"
-    #pass
+  print(board_new)
 
-#def move(board, mark, position):
-    #pass
+def evaluate_game():
+  check_if_win()
+  check_if_tie()
 
-#def player_move(position, sign):
-#    int(input("play a position between 0 and 19"))
-#tictactoe_new = 
+def check_if_win():
+  #check rows
+    return
 
-#def pc_move(board):
- #  from random import randrange
-#print("randrange"(19))
+def check_if_tie():
+  return
+
+def flip_player():
+  return
+  
+play_game()
